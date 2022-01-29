@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{6714, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-localizable-zone(shapeGraphics1)*/</string>
+			<key>OriginalRange</key>
+			<string>{6714, 38}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{6735, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-end-localizable-zone*/</string>
+			<key>OriginalRange</key>
+			<string>{6773, 26}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Creates a label.
+let label = Label(text: "Hello, World!", color: #colorLiteral(red: 1.0008043050765991, green: 0.4036714434623718, blue: 0.6243900656700134, alpha: 1.0), font: .Impact, size: 35)
+</string>
+			<key>ModifiedRange</key>
+			<string>{6753, 198}</string>
+			<key>OriginalContent</key>
+			<string>// /*#-localizable-zone(shapeGraphics2)*/Creates a label./*#-end-localizable-zone*/
+let label = Label(text: /*#-localizable-zone(shapeGraphicsHelloWorld)*/"Hello, World!"/*#-end-localizable-zone*/, color: #colorLiteral(red: 1.0008043050765991, green: 0.4036714434623718, blue: 0.6243900656700134, alpha: 1.0), font: .Futura, size: 35)
+</string>
+			<key>OriginalRange</key>
+			<string>{6817, 335}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Creates a polygon graphic.
+let polygon = Graphic.polygon(radius: 40, sides: 6, color: #colorLiteral(red: 1.0696003437042236, green: 0.5194986462593079, blue: 0.48886001110076904, alpha: 1.0))
+</string>
+			<key>ModifiedRange</key>
+			<string>{6996, 195}</string>
+			<key>OriginalContent</key>
+			<string>// /*#-localizable-zone(shapeGraphics3)*/Creates a polygon graphic./*#-end-localizable-zone*/
+let polygon = Graphic.polygon(radius: 40, sides: 6, color: #colorLiteral(red: 1.0, green: 0.5502503514, blue: 0.5088998675, alpha: 1.0))
+</string>
+			<key>OriginalRange</key>
+			<string>{7197, 231}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{7241, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-localizable-zone(shapeGraphics4)*/</string>
+			<key>OriginalRange</key>
+			<string>{7478, 38}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{7269, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-end-localizable-zone*/</string>
+			<key>OriginalRange</key>
+			<string>{7544, 26}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{7472, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-localizable-zone(shapeGraphics5)*/</string>
+			<key>OriginalRange</key>
+			<string>{7773, 38}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{7497, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-end-localizable-zone*/</string>
+			<key>OriginalRange</key>
+			<string>{7836, 26}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{7671, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-localizable-zone(shapeGraphics6)*/</string>
+			<key>OriginalRange</key>
+			<string>{8036, 38}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{7694, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-end-localizable-zone*/</string>
+			<key>OriginalRange</key>
+			<string>{8097, 26}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{7910, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-localizable-zone(shapeGraphics7)*/</string>
+			<key>OriginalRange</key>
+			<string>{8339, 38}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{7935, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-end-localizable-zone*/</string>
+			<key>OriginalRange</key>
+			<string>{8402, 26}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{8026, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-localizable-zone(shapeGraphics8)*/</string>
+			<key>OriginalRange</key>
+			<string>{8519, 38}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{8057, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-end-localizable-zone*/</string>
+			<key>OriginalRange</key>
+			<string>{8588, 26}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

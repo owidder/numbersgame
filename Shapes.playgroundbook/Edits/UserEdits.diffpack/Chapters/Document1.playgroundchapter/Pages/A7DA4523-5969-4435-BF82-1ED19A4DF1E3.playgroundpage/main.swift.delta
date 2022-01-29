@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import SpriteKit
+
+// Sets up the LiveView.
+</string>
+			<key>ModifiedRange</key>
+			<string>{6710, 43}</string>
+			<key>OriginalContent</key>
+			<string>// /*#-localizable-zone(shapesTemplate1)*/Sets up the LiveView./*#-end-localizable-zone*/
+</string>
+			<key>OriginalRange</key>
+			<string>{6710, 90}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>scene.physicsWorld.gravity = CGVector(dx:0, dy: 0)
+let gravityField = SKFieldNode.radialGravityField()
+gravityField.position = CGPoint(x:scene.frame.width/2, y:scene.frame.height/2)
+scene.addChild(gravityField)
+
+let ballCategory: UInt32 = 0b0001
+let edgeCategory: UInt32 = 0b0010
+
+// Creates a circle graphic.
+</string>
+			<key>ModifiedRange</key>
+			<string>{6770, 310}</string>
+			<key>OriginalContent</key>
+			<string>// /*#-localizable-zone(shapesTemplate2)*/Creates a circle graphic./*#-end-localizable-zone*/
+</string>
+			<key>OriginalRange</key>
+			<string>{6817, 94}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>(x: scene.frame.width/2, y: scene.frame.height/2)</string>
+			<key>ModifiedRange</key>
+			<string>{7244, 49}</string>
+			<key>OriginalContent</key>
+			<string>.zero</string>
+			<key>OriginalRange</key>
+			<string>{7075, 5}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>circle.physicsBody = SKPhysicsBody(circleOfRadius: 100)
+circle.physicsBody!.categoryBitMask = ballCategory
+
+let edge = SKPhysicsBody(edgeLoopFrom: scene.frame)
+edge.categoryBitMask = edgeCategory
+edge.contactTestBitMask = ballCategory
+edge.collisionBitMask = ballCategory
+scene.physicsBody = edge
+
+
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{7321, 301}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{7108, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
