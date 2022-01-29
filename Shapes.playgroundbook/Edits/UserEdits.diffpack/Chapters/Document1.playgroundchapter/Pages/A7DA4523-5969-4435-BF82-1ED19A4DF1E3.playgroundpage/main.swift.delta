@@ -31,7 +31,7 @@ let ballCategory: UInt32 = 0b0001
 let edgeCategory: UInt32 = 0b0010
 
 // Creates a circle graphic.
-let circle = Graphic.circle(radius: 50, color: #colorLiteral(red: 0.4550631046, green: 0.6557807326, blue: 0.9979295135, alpha: 1.0))
+let circle = Graphic.circle(radius: 80, color: #colorLiteral(red: 0.4550631046, green: 0.6557807326, blue: 0.9979295135, alpha: 1.0))
 scene.place(circle, at: Point(x: scene.frame.width/2, y: scene.frame.height/2))
 </string>
 			<key>ModifiedRange</key>
@@ -46,7 +46,7 @@ scene.place(circle, at: Point.zero)
 		</dict>
 		<dict>
 			<key>ModifiedContent</key>
-			<string>circle.physicsBody = SKPhysicsBody(circleOfRadius: 50)
+			<string>circle.physicsBody = SKPhysicsBody(circleOfRadius: 80)
 circle.physicsBody!.categoryBitMask = ballCategory
 
 let edge = SKPhysicsBody(edgeLoopFrom: scene.frame)
