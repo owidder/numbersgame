@@ -10,10 +10,12 @@
 			<key>ModifiedContent</key>
 			<string>import SpriteKit
 
+let RADIUS: Int = 150
+
 // Sets up the LiveView.
 </string>
 			<key>ModifiedRange</key>
-			<string>{6710, 43}</string>
+			<string>{6710, 66}</string>
 			<key>OriginalContent</key>
 			<string>// /*#-localizable-zone(shapesTemplate1)*/Sets up the LiveView./*#-end-localizable-zone*/
 </string>
@@ -22,31 +24,39 @@
 		</dict>
 		<dict>
 			<key>ModifiedContent</key>
-			<string>scene.physicsWorld.gravity = CGVector(dx:0, dy: 0)
-let gravityField = SKFieldNode.radialGravityField()
-gravityField.position = CGPoint(x:scene.frame.width/2, y:scene.frame.height/2)
-scene.addChild(gravityField)
+			<string>func addGravityField(q1: Int, q2: Int) -&gt; Void {
+    let gravityField = SKFieldNode.radialGravityField()
+    gravityField.position = CGPoint(x:scene.frame.width/CGFloat(q1), y:scene.frame.height/CGFloat(q2))
+    scene.addChild(gravityField)
+}
+
+func addRandomGravityFields(count: Int) -&gt; Void {
+    for _ in 1...count {
+        addGravityField(q1: Int.random(in: 1...10), q2: Int.random(in: 1...10))
+    }
+}
+
+scene.physicsWorld.gravity = CGVector(dx:0, dy: 0)
+addRandomGravityFields(count: 1)
 
 let ballCategory: UInt32 = 0b0001
 let edgeCategory: UInt32 = 0b0010
 
 // Creates a circle graphic.
-let circle = Graphic.circle(radius: 80, color: #colorLiteral(red: 0.4550631046, green: 0.6557807326, blue: 0.9979295135, alpha: 1.0))
-scene.place(circle, at: Point(x: scene.frame.width/2, y: scene.frame.height/2))
+let circle = Graphic.circle(radius: RADIUS, color: #colorLiteral(red: 0.4550631046, green: 0.6557807326, blue: 0.9979295135, alpha: 1.0))
 </string>
 			<key>ModifiedRange</key>
-			<string>{6770, 524}</string>
+			<string>{6793, 729}</string>
 			<key>OriginalContent</key>
 			<string>// /*#-localizable-zone(shapesTemplate2)*/Creates a circle graphic./*#-end-localizable-zone*/
 let circle = Graphic.circle(radius: 100, color: #colorLiteral(red: 0.4550631046, green: 0.6557807326, blue: 0.9979295135, alpha: 1.0))
-scene.place(circle, at: Point.zero)
 </string>
 			<key>OriginalRange</key>
-			<string>{6817, 265}</string>
+			<string>{6817, 229}</string>
 		</dict>
 		<dict>
 			<key>ModifiedContent</key>
-			<string>circle.physicsBody = SKPhysicsBody(circleOfRadius: 80)
+			<string>circle.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(RADIUS))
 circle.physicsBody!.categoryBitMask = ballCategory
 
 let edge = SKPhysicsBody(edgeLoopFrom: scene.frame)
@@ -60,7 +70,7 @@ scene.physicsBody = edge
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{7320, 300}</string>
+			<string>{7584, 313}</string>
 			<key>OriginalContent</key>
 			<string></string>
 			<key>OriginalRange</key>
