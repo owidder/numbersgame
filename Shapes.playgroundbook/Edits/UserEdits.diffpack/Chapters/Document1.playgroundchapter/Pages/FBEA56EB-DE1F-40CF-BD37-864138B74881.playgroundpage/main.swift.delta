@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseFile</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/template.playgroundpage/main.swift</string>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>import SpriteKit
+import os
+
+let RADIUS: Int = 150
+
+// Sets up the LiveView.
+</string>
+			<key>ModifiedRange</key>
+			<string>{6710, 76}</string>
+			<key>OriginalContent</key>
+			<string>// /*#-localizable-zone(shapesTemplate1)*/Sets up the LiveView./*#-end-localizable-zone*/
+</string>
+			<key>OriginalRange</key>
+			<string>{6710, 90}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>class Numbers: NSObject, SKPhysicsContactDelegate {
+    
+    let ballCategory: UInt32 = 0b0001
+    let edgeCategory: UInt32 = 0b0010
+    
+    func randomGravity() -&gt; CGVector {
+        switch Int.random(in: 1...4) {
+        case 1:
+            return CGVector(dx:1, dy:0)
+            
+        case 2:
+            return CGVector(dx: -1, dy: 0)
+            
+        case 3:
+            return CGVector(dx: 0, dy: 1)
+            
+        default:
+            return CGVector(dx: 0, dy: -1)
+        }
+    }
+    
+    func createEdge(fromX: CGFloat, fromY: CGFloat, toX: CGFloat, toY: CGFloat, name: String) -&gt; SKPhysicsBody {
+        let width = max(toX - fromX, 10)
+        let height = max(toY - fromY, 10)
+        let size = CGSize(width: width, height: height)
+        let cgCenter = CGPoint(x: fromX + (fromX + width/2), y: fromY + (fromY + height/2))
+        let center = Point(x: cgCenter.x - scene.frame.width/2, y: cgCenter.y - scene.frame.height/2)
+        
+        let edge = SKPhysicsBody(rectangleOf: size)
+        edge.categoryBitMask = edgeCategory
+        edge.contactTestBitMask = ballCategory
+        edge.collisionBitMask = ballCategory
+        edge.isDynamic = false
+        
+        let rectangle = Graphic.rectangle(width: Int(width), height: Int(height), cornerRadius: 0, color: #colorLiteral(red: 1.0000001192092896, green: 1.0000001192092896, blue: 1.0000001192092896, alpha: 1.0))
+        rectangle.physicsBody = edge;
+        rectangle.name = name
+        scene.place(rectangle, at: center)
+        
+        return edge
+    }
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        print(contact.bodyA.node?.name)
+        print(contact.bodyB.node?.name)
+    }
+    
+    func start() -&gt; Void {
+        scene.physicsWorld.gravity = randomGravity()
+        //scene.physicsWorld.contactDelegate = 
+        scene.view!.showsPhysics = true
+        
+        // Creates a circle graphic.
+        let circle = Graphic.circle(radius: RADIUS, color: #colorLiteral(red: 0.4550631046, green: 0.6557807326, blue: 0.9979295135, alpha: 1.0))
+        circle.name = "ball"
+        scene.place(circle, at: Point.zero)
+        circle.isDraggable = true
+        circle.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(RADIUS))
+        circle.physicsBody!.categoryBitMask = ballCategory
+        
+        let topEdge = createEdge(fromX: scene.frame.minX, fromY: scene.frame.minY, toX: scene.frame.minX + scene.frame.width, toY: scene.frame.minY, name: "top")
+        let leftEdge = createEdge(fromX: scene.frame.minX, fromY:scene.frame.minY, toX: scene.frame.minX, toY:scene.frame.minY + scene.frame.height, name: "left")
+        let bottomEdge = createEdge(fromX: scene.frame.minX, fromY:scene.frame.minY + scene.frame.height, toX: scene.frame.minX + scene.frame.width, toY:scene.frame.minY + scene.frame.height, name: "bottom")
+        let rightEdge = createEdge(fromX: scene.frame.minX + scene.frame.width, fromY:scene.frame.minY, toX: scene.frame.minX + scene.frame.width, toY:scene.frame.minY + scene.frame.height, name: "right")
+        
+        //let totalBody = SKPhysicsBody(bodies: [topEdge, leftEdge, bottomEdge, rightEdge])
+        
+        //totalBody.categoryBitMask = edgeCategory
+        //totalBody.contactTestBitMask = ballCategory
+        //totalBody.collisionBitMask = ballCategory
+        //totalBody.affectedByGravity = false
+        //totalBody.isDynamic = false
+        
+        //scene.physicsBody = totalBody
+        
+        scene.physicsWorld.contactDelegate = self
+    }
+}
+
+let numbers = Numbers()
+numbers.start()
+
+//let edge = SKPhysicsBody(edgeLoopFrom: scene.frame)
+//edge.categoryBitMask = edgeCategory
+//edge.contactTestBitMask = ballCategory
+//edge.collisionBitMask = ballCategory
+//scene.physicsBody = edge
+
+
+
+</string>
+			<key>ModifiedRange</key>
+			<string>{6803, 3754}</string>
+			<key>OriginalContent</key>
+			<string>// /*#-localizable-zone(shapesTemplate2)*/Creates a circle graphic./*#-end-localizable-zone*/
+let circle = Graphic.circle(radius: 100, color: #colorLiteral(red: 0.4550631046, green: 0.6557807326, blue: 0.9979295135, alpha: 1.0))
+scene.place(circle, at: Point.zero)
+circle.isDraggable = true
+</string>
+			<key>OriginalRange</key>
+			<string>{6817, 291}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
