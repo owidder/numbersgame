@@ -84,6 +84,8 @@ let RADIUS: Int = 150
         circle.isDraggable = true
         circle.physicsBody = SKPhysicsBody(circleOfRadius: CGFloat(RADIUS))
         circle.physicsBody!.categoryBitMask = ballCategory
+        circle.physicsBody?.mass = 0.001
+        circle.physicsBody?.density = 0.001
         
         let topEdge = createEdge(fromX: scene.frame.minX, fromY: scene.frame.minY, toX: scene.frame.minX + scene.frame.width, toY: scene.frame.minY, name: "top")
         let leftEdge = createEdge(fromX: scene.frame.minX, fromY:scene.frame.minY, toX: scene.frame.minX, toY:scene.frame.minY + scene.frame.height, name: "left")
@@ -117,7 +119,7 @@ numbers.start()
 
 </string>
 			<key>ModifiedRange</key>
-			<string>{6803, 3754}</string>
+			<string>{6803, 3839}</string>
 			<key>OriginalContent</key>
 			<string>// /*#-localizable-zone(shapesTemplate2)*/Creates a circle graphic./*#-end-localizable-zone*/
 let circle = Graphic.circle(radius: 100, color: #colorLiteral(red: 0.4550631046, green: 0.6557807326, blue: 0.9979295135, alpha: 1.0))
